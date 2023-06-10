@@ -10,7 +10,7 @@ public class SampleSubnetGroupsCommandParser extends SampleQueryCommandParser {
 
 	public SampleSubnetGroupsCommandParser() {
 		setDescription(Locale.ENGLISH, "Get subnet groups from the Logpresso server.");
-		setDescription(Locale.KOREAN, "·Î±×ÇÁ·¹¼Ò ¼­¹öÀÇ ³×Æ®¿öÅ© ´ë¿ª ±×·ì ¸ñ·ÏÀ» Á¶È¸ÇÕ´Ï´Ù.");
+		setDescription(Locale.KOREAN, "ë¡œê·¸í”„ë ˆì†Œ ì„œë²„ì˜ ë„¤íŠ¸ì›Œí¬ ëŒ€ì—­ ê·¸ë£¹ ëª©ë¡ì„ ì¡°íšŒí•©ë‹ˆë‹¤.");
 
 		setOutput("guid", ValueType.STRING, Locale.ENGLISH, "GUID", "");
 		setOutput("name", ValueType.STRING, Locale.ENGLISH, "Name", "");
@@ -23,13 +23,13 @@ public class SampleSubnetGroupsCommandParser extends SampleQueryCommandParser {
 		setOutput("updated", ValueType.DATE, Locale.ENGLISH, "Updated", "");
 
 		setOutput("guid", ValueType.STRING, Locale.KOREAN, "GUID", "");
-		setOutput("name", ValueType.STRING, Locale.KOREAN, "ÀÌ¸§", "");
-		setOutput("description", ValueType.STRING, Locale.KOREAN, "¼³¸í", "");
-		setOutput("subnet_count", ValueType.INT, Locale.KOREAN, "Ç×¸ñ ¼ö", "³×Æ®¿öÅ© ´ë¿ª ±×·ì¿¡ ¼ÓÇÑ Ç×¸ñ ¼ö");
-		setOutput("user_name", ValueType.STRING, Locale.KOREAN, "°èÁ¤ ÀÌ¸§", "");
-		setOutput("user_guid", ValueType.STRING, Locale.KOREAN, "°èÁ¤ GUID", "");
-		setOutput("created", ValueType.DATE, Locale.KOREAN, "»ı¼ºÀÏ½Ã", "");
-		setOutput("updated", ValueType.DATE, Locale.KOREAN, "¼öÁ¤ÀÏ½Ã", "");
+		setOutput("name", ValueType.STRING, Locale.KOREAN, "ì´ë¦„", "");
+		setOutput("description", ValueType.STRING, Locale.KOREAN, "ì„¤ëª…", "");
+		setOutput("subnet_count", ValueType.INT, Locale.KOREAN, "í•­ëª© ìˆ˜", "ë„¤íŠ¸ì›Œí¬ ëŒ€ì—­ ê·¸ë£¹ì— ì†í•œ í•­ëª© ìˆ˜");
+		setOutput("user_name", ValueType.STRING, Locale.KOREAN, "ê³„ì • ì´ë¦„", "");
+		setOutput("user_guid", ValueType.STRING, Locale.KOREAN, "ê³„ì • GUID", "");
+		setOutput("created", ValueType.DATE, Locale.KOREAN, "ìƒì„±ì¼ì‹œ", "");
+		setOutput("updated", ValueType.DATE, Locale.KOREAN, "ìˆ˜ì •ì¼ì‹œ", "");
 	}
 
 	@Override

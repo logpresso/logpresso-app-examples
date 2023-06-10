@@ -14,10 +14,10 @@ public class SampleCreateSubnetGroupCommandParser extends SampleQueryCommandPars
 		setDescription(Locale.ENGLISH, "Create new subnet group in the Logpresso server.");
 		setOption("name", REQUIRED, Locale.ENGLISH, "Name", "New name of the subnet group.");
 
-		setDisplayGroup(Locale.KOREAN, "»ùÇÃ");
-		setDisplayName(Locale.KOREAN, "³×Æ®¿öÅ© ´ë¿ª ±×·ì »ı¼º");
-		setDescription(Locale.KOREAN, "·Î±×ÇÁ·¹¼Ò ¼­¹ö¿¡ »õ ³×Æ®¿öÅ© ´ë¿ª ±×·ìÀ» »ı¼ºÇÕ´Ï´Ù.");
-		setOption("name", REQUIRED, Locale.KOREAN, "ÀÌ¸§", "»õ ³×Æ®¿öÅ© ´ë¿ª ±×·ì ÀÌ¸§");
+		setDisplayGroup(Locale.KOREAN, "ìƒ˜í”Œ");
+		setDisplayName(Locale.KOREAN, "ë„¤íŠ¸ì›Œí¬ ëŒ€ì—­ ê·¸ë£¹ ìƒì„±");
+		setDescription(Locale.KOREAN, "ë¡œê·¸í”„ë ˆì†Œ ì„œë²„ì— ìƒˆ ë„¤íŠ¸ì›Œí¬ ëŒ€ì—­ ê·¸ë£¹ì„ ìƒì„±í•©ë‹ˆë‹¤.");
+		setOption("name", REQUIRED, Locale.KOREAN, "ì´ë¦„", "ìƒˆ ë„¤íŠ¸ì›Œí¬ ëŒ€ì—­ ê·¸ë£¹ ì´ë¦„");
 	}
 
 	@Override

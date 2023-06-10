@@ -42,10 +42,10 @@ public abstract class SampleQueryCommandParser extends ConnectProfileQueryComman
 	@Override
 	public Map<String, QueryErrorMessage> getErrorMessages() {
 		Map<String, QueryErrorMessage> errors = new HashMap<>();
-		errors.put(ERR_SERVICE_UNAVAILABLE, newMsg("No available sample profile found.", "»ç¿ë °¡´ÉÇÑ »ùÇÃ ÇÁ·ÎÆÄÀÏÀÌ ¾ø½À´Ï´Ù."));
-		errors.put(ERR_PROFILE_REQUIRED, newMsg("Specify valid sample profile.", "»ùÇÃ ÇÁ·ÎÆÄÀÏ ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä."));
+		errors.put(ERR_SERVICE_UNAVAILABLE, newMsg("No available sample profile found.", "ì‚¬ìš© ê°€ëŠ¥í•œ ìƒ˜í”Œ í”„ë¡œíŒŒì¼ì´ ì—†ìŠµë‹ˆë‹¤."));
+		errors.put(ERR_PROFILE_REQUIRED, newMsg("Specify valid sample profile.", "ìƒ˜í”Œ í”„ë¡œíŒŒì¼ ì´ë¦„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”."));
 		errors.put(ERR_NAME_REQUIRED, newMsg("Specify name option in the sample-create-subnet-group command.",
-				"sample-create-subnet-group ¸í·É¾î¿¡ name ¿É¼ÇÀ» ÁöÁ¤ÇÏ¼¼¿ä."));
+				"sample-create-subnet-group ëª…ë ¹ì–´ì— name ì˜µì…˜ì„ ì§€ì •í•˜ì„¸ìš”."));
 
 		return errors;
 	}

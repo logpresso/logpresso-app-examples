@@ -44,14 +44,14 @@ public class SampleConnectProfileFactory extends AbstractConnectProfileFactory {
 	@Override
 	public String getDisplayName(Locale locale) {
 		if (locale != null && locale.equals(Locale.KOREAN))
-			return "»ùÇÃ";
+			return "ìƒ˜í”Œ";
 		return "Sample";
 	}
 
 	@Override
 	public String getDescription(Locale locale) {
 		if (locale != null && locale.equals(Locale.KOREAN))
-			return "»ùÇÃ Á¢¼Ó ¼³Á¤À» °ü¸®ÇÕ´Ï´Ù.";
+			return "ìƒ˜í”Œ ì ‘ì† ì„¤ì •ì„ ê´€ë¦¬í•©ë‹ˆë‹¤.";
 		return "Manage connection properties of sample app.";
 	}
 
@@ -62,10 +62,10 @@ public class SampleConnectProfileFactory extends AbstractConnectProfileFactory {
 
 	@Override
 	public List<LoggerConfigOption> getConfigOptions() {
-		LoggerConfigOption apiKey = new MutableStringConfigType("api_key", t("API key", "API Å°"),
-				t("GUID format", "GUID Çü½Ä"), true);
-		LoggerConfigOption endpoint = new MutableStringConfigType("endpoint", t("Endpoint", "¿£µåÆ÷ÀÎÆ®"),
-				t("REST API URL", "REST API ÁÖ¼Ò"), true);
+		LoggerConfigOption apiKey = new MutableStringConfigType("api_key", t("API key", "API í‚¤"),
+				t("GUID format", "GUID í˜•ì‹"), true);
+		LoggerConfigOption endpoint = new MutableStringConfigType("endpoint", t("Endpoint", "ì—”ë“œí¬ì¸íŠ¸"),
+				t("REST API URL", "REST API ì£¼ì†Œ"), true);
 
 		return Arrays.asList(apiKey, endpoint);
 	}
@@ -74,7 +74,7 @@ public class SampleConnectProfileFactory extends AbstractConnectProfileFactory {
 	public String describeConfigs(ConnectProfile profile, Locale locale) {
 		String endpoint = profile.getString("endpoint");
 		if (locale != null && locale.equals(Locale.KOREAN))
-			return "¿£µåÆ÷ÀÎÆ®: " + endpoint;
+			return "ì—”ë“œí¬ì¸íŠ¸: " + endpoint;
 		return "Endpoint: " + endpoint;
 	}
 
