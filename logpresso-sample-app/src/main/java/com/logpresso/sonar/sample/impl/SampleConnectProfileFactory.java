@@ -62,12 +62,12 @@ public class SampleConnectProfileFactory extends AbstractConnectProfileFactory {
 
 	@Override
 	public List<LoggerConfigOption> getConfigOptions() {
-		LoggerConfigOption apiKey = new MutableStringConfigType("api_key", t("API key", "API 키"),
-				t("GUID format", "GUID 형식"), true);
 		LoggerConfigOption endpoint = new MutableStringConfigType("endpoint", t("Endpoint", "엔드포인트"),
 				t("REST API URL", "REST API 주소"), true);
+		LoggerConfigOption apiKey = new MutableStringConfigType("api_key", t("API key", "API 키"),
+				t("GUID format", "GUID 형식"), true);
 
-		return Arrays.asList(apiKey, endpoint);
+		return Arrays.asList(endpoint, apiKey);
 	}
 
 	@Override

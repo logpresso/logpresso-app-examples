@@ -42,7 +42,7 @@ public class SampleSubnetGroupsCommand extends SampleDriverQueryCommand {
 		for (Object o : groups) {
 			Map<String, Object> m = (Map<String, Object>) o;
 			m.put("created", parseDate((String) m.get("created")));
-			m.put("updated", parseDate((String) m.get("update")));
+			m.put("updated", parseDate((String) m.get("updated")));
 
 			pushPipe(new Row(m));
 		}
