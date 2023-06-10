@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.logpresso.sonar</groupId>
+	<artifactId>logpresso-sample-app</artifactId>
+	<version>1.0.2306.0</version>
+	<packaging>bundle</packaging>
+	<name>Logpresso Sample App</name>
+
+	<repositories>
+		<repository>
+			<id>logpresso-repo</id>
+			<name>Logpresso Maven Repository</name>
+			<url>https://maven.logpresso.com/</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>logpresso-plugin-repo</id>
+			<name>Logpresso Maven Repository</name>
+			<url>https://maven.logpresso.com/</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>5.1.9</version>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Bundle-SymbolicName>com.logpresso.sonar.sample</Bundle-SymbolicName>
+						<Export-Package>
+							com.logpresso.sonar.sample;version=${project.version},
+						</Export-Package>
+						<Import-Package>
+							org.json;version="1.1.0",
+							org.araqne.codec;version="2.2",
+							org.araqne.log.api;version="3.13.0",
+							org.logpresso.api.profile;version="1.1.0",
+							org.logpresso.api.profile.query;version="1.1.0",
+							org.araqne.logdb;version="3.10.0",
+							org.araqne.msgbus;version="1.12.0",
+							com.logpresso.sonar.api.*;resolution:=optional,
+							*
+						</Import-Package>
+						<Private-Package>
+							com.logpresso.sonar.sample.impl,
+							com.logpresso.sonar.sample.query,
+						</Private-Package>
+					</instructions>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-ipojo-plugin</artifactId>
+				<version>1.12.1.asm8</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>ipojo-bundle</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.ipojo</artifactId>
+			<version>1.12.1.asm8</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.ipojo.annotations</artifactId>
+			<version>1.12.1.asm8</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.12</version>
+		</dependency>
+		<dependency>
+			<groupId>com.logpresso.sonar</groupId>
+			<artifactId>sonar-app-api</artifactId>
+			<version>4.0.2306.0</version>
+		</dependency>
+	</dependencies>
+</project>
