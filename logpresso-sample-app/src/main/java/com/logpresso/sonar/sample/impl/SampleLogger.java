@@ -17,6 +17,7 @@ import org.araqne.log.api.Log;
 import org.araqne.log.api.LoggerFactory;
 import org.araqne.log.api.LoggerSpecification;
 import org.araqne.log.api.LoggerStatus;
+import org.araqne.log.api.Reconfigurable;
 import org.araqne.log.api.RestApiClient;
 import org.araqne.log.api.RestApiResponse;
 import org.araqne.log.api.SimpleLog;
@@ -26,7 +27,7 @@ import org.json.JSONObject;
 import org.logpresso.api.profile.ConnectProfile;
 import org.logpresso.api.profile.ConnectProfileService;
 
-public class SampleLogger extends AbstractLogger {
+public class SampleLogger extends AbstractLogger implements Reconfigurable {
 
 	private static final String CONNECT_PROFILE_TYPE = "sample";
 	private final org.slf4j.Logger slog = org.slf4j.LoggerFactory.getLogger(SampleLogger.class);
@@ -36,6 +37,11 @@ public class SampleLogger extends AbstractLogger {
 	public SampleLogger(LoggerSpecification spec, LoggerFactory factory, ConnectProfileService connectProfileService) {
 		super(spec, factory);
 		this.connectProfileService = connectProfileService;
+	}
+
+	@Override
+	public void onConfigChange(Map<String, String> oldConfigs, Map<String, String> newConfigs) {
+		// ignored. there are no instance variables for state management.
 	}
 
 	@Override
